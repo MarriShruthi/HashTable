@@ -118,11 +118,14 @@ namespace HashTable
 
         public void Display()
         {
-
+            //linkedlist is iterated in array
             foreach (var linkedList in items)
             {
-
+                //linkedlist may be null, if hashcode never generated the positon of array
                 if (linkedList != null)
+
+                    //if linkedlist is not null, linkedlist is iterated
+
                     foreach (keyValue<K, V> keyvalue in linkedList)
                     {
 
@@ -130,7 +133,14 @@ namespace HashTable
                     }
             }
         }
+
     }
+
+    /// <summary>
+    /// Defining a struct data type to store key and value
+    /// struct is similar to class and used to hold values
+    /// </summary>
+
     public struct keyValue<k, v>
     {
 
